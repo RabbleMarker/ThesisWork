@@ -1,0 +1,34 @@
+# This is a Conda environment file
+# It automatically creates a conda environment with the specified name and packages
+
+# To use, type the 'create env' command while pointing to this file
+# e.g.
+# conda env create --file environment_APriori.yml
+
+# IMPORTANT: The inclusion of pip packages can easily break things, if you install additional packages manually!
+# Instead, include extra packages only through this file (by adding them to the list below)
+# Then use
+# conda env update --file environment_APriori.yml --prune
+# While in your enviroment, to apply your new packages to it
+
+name: apriori-env # Environment Name
+dependencies: # package list
+    - python # Optionally specify versions with 'python=3.XX'
+    - ipython
+    - cantera
+    - matplotlib
+    - numpy
+    - scipy
+    - tabulate
+    - requests
+    - jupyter
+    - pandas
+#    - text-unidecode # Kaggle Dependencies
+#    - tqdm
+#    - python-slugify
+#    - protobuf
+    - kaggle # Needed to Download BastNET cases
+    - pip
+    - pip: # Include pip dependencies last!
+        - PyCSP
+        - aPrioriDNS #Is only found on pip / installable through pip

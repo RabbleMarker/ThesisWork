@@ -1,0 +1,36 @@
+Command used to hook into conda (execute at every start!)
+eval "$(/home/pfisun7n/mansurov/miniforge3/bin/conda shell.bash hook)"
+
+Additionally, needed to modify kaggle variable to point to my credentials, for that I ran
+conda env config vars set KAGGLE_CONFIG_DIR=/home/pfisun7n/mansurov
+
+
+
+Approach to solving the "running out of memory" problem: Instead of loading everything, use pointers
+	+ Huge leap in accessibility! No need for overspecced systems,
+	a Uni laptop could already be enough
+	- Increases amount of disk read operations
+	- might be slower, since you have to look at disk (instead of RAM)
+	each time you want to know something
+
+
+Expansion to handle multiple timeframes/timesteps
+	- Looks to be id based, sort timestep by id (id0000, id0001 etc)
+	- get actual timestep from setup file (if present, e.g. OpenFOAM)
+
+
+Download function downloading tutorial case exlusively? 
+Would be great to expand it to download BlastNET cases
+
+Handles saving plots with a save=True/False check,
+	- would recommend leaving it to the user (returning the plot object, fig/ax?)
+	- Should sanitize filenames or just let the user overwrite them e.g. filename=Plot.png. The Linux filesystem LaTeX formatted Units (e.g. $[kg/m^3/s]$) in the filename itself poorly and errors out on my end when trying to save a Plot containing these in its name
+	- svg Plot format? Higher resolution plots?
+
+
+
+chunk loading parallelization: on by default?
+
+Scatter Plot file outputs named "Contour Plot"?
+
+Interrupt for already created data? Genius!
