@@ -5,7 +5,7 @@
 # e.g.
 # conda env create --file environment_APriori.yml
 
-# IMPORTANT: The inclusion of pip packages can easily break things if you install additional packages manually!
+# IMPORTANT: The inclusion of pip packages can easily break things, if you install additional packages manually!
 # Instead, include extra packages only through this file (by adding them to the list below)
 # Then use
 # conda env update --file environment_APriori.yml --prune
@@ -23,11 +23,11 @@ dependencies: # package list
     - requests
     - jupyter
     - pandas
-#    - text-unidecode # Kaggle Dependencies, include if intalling kaggle through pip
+#    - text-unidecode # Kaggle Dependencies
 #    - tqdm
 #    - python-slugify
 #    - protobuf
-    - kaggle # Needed to Download BastNET cases
+#    - kaggle # CLI, that can be used to Download BastNET cases automatically
     - pip
     - pip: # Include pip dependencies last!
         - PyCSP
